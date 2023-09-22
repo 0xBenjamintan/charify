@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+/* :root {
+  --foreground-rgb: #464646;
+} */
+
+html,
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Variables */
+:root {
+  --secondary-glow: conic-gradient(
+    from 70deg at 50% 50%,
+    rgb(59 130 246) 0deg, /* Change color here */
+    /* Change color here */
+    transparent 360deg
+  );
+}
+
+/* Gradient Styling */
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+body::before {
+  background: var(--third-glow);
+  border-radius: 50%;
+  width: 50vw;
+  height: 50vw;
+  margin-left: -200px;
+  filter: blur(90px);
+  top: calc(50vh - 50vw/2);
+  left: calc(50vw);
+}
+
+body::after {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 500px;
+  height: 700px;
+  filter: blur(90px);
+  top: calc(50vh - 50vw/2);
+  left: calc(50vw - 50vw/2);
+}
+
+/* Keyframes for Animation */
+@keyframes animateBefore {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(200px) scale(0.8);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animateAfter {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-250px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Applying the Animations */
+body::before {
+  animation: animateBefore 7s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+}
+
+body::after {
+  animation: animateAfter 7s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+}
