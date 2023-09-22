@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ConnectButton } from '@rainbow-me/rainbowkit'
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import Link from "next/link";
 import dynamic from 'next/dynamic';
 
@@ -17,11 +17,11 @@ const Header = () => {
                 className="w-8 md:w-9"
                 alt="logo"
               />
-              <p className="text-2xl font-bold ml-2">ATTESTME</p> 
+              <p className="text-2xl font-bold ml-2 text-gradient">CHARIFY</p> 
           </div>
         </Link>
         <div className="flex flex-wrap justify-end">
-          <ConnectButton />
+          <WalletMultiButton className=''/>
         </div>
       </div>
     </header>

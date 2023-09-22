@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
  
-/* :root {
-  --foreground-rgb: #464646;
-} */
 
 html,
 body {
@@ -14,6 +11,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  /* background-color: #212121; */
+}
+
+/* Custom Text Gradient, dont remove this is for the text */
+.text-gradient {
+  background: linear-gradient(90deg, #19fb9b, #5275bb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* Global Variables */
