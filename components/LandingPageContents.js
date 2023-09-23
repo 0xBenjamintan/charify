@@ -2,7 +2,7 @@ import React from 'react';
 
 const LandingPageContents = ({ imageUrl, title }) => {
   return (
-    <div className="flex flex-col min-h-screen mx-auto max-w-6xl px-4 pt-8 pb-16 mt-20">
+    <div className="flex flex-col min-h-screen mx-auto max-w-6xl mt-20">
         <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2 pr-4">
                 {/* Left Column (Image) */}
