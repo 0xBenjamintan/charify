@@ -11,7 +11,7 @@ body {
   padding: 0;
   background-color: #000000;
   color: white;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Custom Text Gradient, dont remove this is for the text */
@@ -99,4 +99,17 @@ body::before {
 
 body::after {
   animation: animateAfter 7s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+}
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 0.5em; /* Width of the hidden scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track (background) transparent */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the thumb (the draggable part) transparent */
 }

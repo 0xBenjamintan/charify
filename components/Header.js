@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 
 const Header = () => {
   return (
-    <header className="flex flex-col gap-5 border-b border-gray-350">
-      <div className="py-4 flex items-center justify-between">
+    <header className="fixed w-full id='site-header'">
+      <div className="py-4 px-4 flex justify-between">
         <Link href="/">
           <div className="flex items-center">
             <Image
