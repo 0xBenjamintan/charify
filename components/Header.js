@@ -16,9 +16,21 @@ const Header = () => {
               className="w-8 md:w-9"
               alt="logo"
             />
-            <p className="text-2xl font-bold ml-2 text-gradient">CHARIFY</p>
+            <p className="text-2xl font-bold ml-2 text-gradient z-10">CHARIFY</p>
           </div>
         </Link>
+        <div className="flex">
+          <Link href="/mainPage">
+            <div className="items-center">
+              <p className="text-xl font-bold ml-2 nav-text pr-2 z-10">Main Page</p>
+            </div>
+          </Link>
+          <Link href="/mainPage">
+            <div className="items-center">
+              <p className="text-xl font-bold ml-2 nav-text pl-2 z-10">Governance</p>
+            </div>
+          </Link>
+        </div>
         <div className="flex flex-wrap justify-end">
           <WalletMultiButton className="btn-gradient" />
         </div>
