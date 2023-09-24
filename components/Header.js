@@ -2,11 +2,14 @@ import Image from "next/image";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 
 const Header = () => {
+  const { publicKey } = useWallet();
+
   return (
-    <header className="fixed w-full id='site-header'">
-      <div className="py-4 px-4 flex justify-between">
+    <header className="fflex flex-col gap-5 id='site-header'">
+      <div className="py-4 flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center">
             <Image
@@ -16,21 +19,30 @@ const Header = () => {
               className="w-8 md:w-9"
               alt="logo"
             />
-            <p className="text-2xl font-bold ml-2 text-gradient z-10">CHARIFY</p>
+            <p className="text-2xl font-bold ml-2 text-gradient z-10">
+              CHARIFY
+            </p>
           </div>
         </Link>
-        <div className="flex">
-          <Link href="/mainPage">
-            <div className="items-center">
-              <p className="text-xl font-bold ml-2 nav-text pr-2 z-10">Main Page</p>
-            </div>
-          </Link>
-          <Link href="/mainPage">
-            <div className="items-center">
-              <p className="text-xl font-bold ml-2 nav-text pl-2 z-10">Governance</p>
-            </div>
-          </Link>
-        </div>
+        {publicKey ? (
+          <div className="flex">
+            <Link href="/mainPage">
+              <div className="items-center">
+                <p className="text-xl font-bold ml-2 nav-text pr-2 z-10">
+                  Main Page
+                </p>
+              </div>
+            </Link>
+            <Link href="/mainPage">
+              <div className="items-center">
+                <p className="text-xl font-bold ml-2 nav-text pl-2 z-10">
+                  Governance
+                </p>
+              </div>
+            </Link>
+          </div>
+        ) : null}
+
         <div className="flex flex-wrap justify-end">
           <WalletMultiButton className="btn-gradient" />
         </div>

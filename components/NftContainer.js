@@ -1,10 +1,8 @@
-import React from 'react'
+import React from "react";
+import dynamic from "next/dynamic";
 
-export default function 
-() {
-  return (
-    <div>
-        hi ser   
-    </div>
-  )
+function NftContainer() {
+  return <div>hi ser</div>;
 }
+
+export default dynamic(() => Promise.resolve(NftContainer), { ssr: false });

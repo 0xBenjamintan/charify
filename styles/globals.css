@@ -23,7 +23,7 @@ body {
 }
 
 .btn-gradient {
-  background-image: linear-gradient(90deg,  #30cfd0, #c43ad6);
+  background-image: linear-gradient(90deg, #30cfd0, #c43ad6);
   border: 0;
 }
 
@@ -32,7 +32,7 @@ body {
   --secondary-glow: conic-gradient(
     from 70deg at 50% 50%,
     #30cfd0 0deg,
-    /* Change color here */ /* Change color here */ transparent 360deg
+    /* Change color here */ transparent 360deg
   );
 }
 
@@ -41,7 +41,7 @@ body::before,
 body::after {
   content: "";
   position: absolute;
-  z-index: 1; 
+  z-index: 1;
   opacity: 0.8;
 }
 
@@ -113,7 +113,7 @@ body::after {
   background-color: transparent; /* Make the thumb (the draggable part) transparent */
 }
 
-.nav-text{
+.nav-text {
   opacity: 0.8;
 }
 
