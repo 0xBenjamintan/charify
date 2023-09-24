@@ -8,8 +8,8 @@ const Header = () => {
   const { publicKey } = useWallet();
 
   return (
-    <header className="fflex flex-col gap-5 id='site-header'">
-      <div className="py-4 flex items-center justify-between">
+    <header className="sticky top-0 z-50">
+      <div className="py-4 flex items-center justify-between mx-12">
         <Link href="/">
           <div className="flex items-center">
             <Image
@@ -44,7 +44,7 @@ const Header = () => {
         ) : null}
 
         <div className="flex flex-wrap justify-end">
-          <WalletMultiButton className="btn-gradient" />
+          <WalletMultiButton />
         </div>
       </div>
     </header>
