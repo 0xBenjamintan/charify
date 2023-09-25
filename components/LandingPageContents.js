@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
-import { Model } from "@/components/Scene";
+import Model from "@/components/Model";
 
 const LandingPageContents = ({ imageUrl, title }) => {
   return (
