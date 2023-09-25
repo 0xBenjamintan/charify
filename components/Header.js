@@ -33,7 +33,7 @@ const Header = () => {
                 </p>
               </div>
             </Link>
-            <Link href="/mainPage">
+            <Link href="/governance">
               <div className="items-center">
                 <p className="text-xl font-bold ml-2 nav-text pl-2 z-10">
                   Governance
