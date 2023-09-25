@@ -23,7 +23,7 @@
   border-radius: 20%;
   border-image-slice: 1;
   border-width: 2px;
-  border-image-source: linear-gradient(to left, #30cfd0, #c43ad6);
+  border-image-source: linear-gradient(to left, #9945ff, #14f195);
 }
 
 .wallet-adapter-button:not([disabled]):focus-visible {
