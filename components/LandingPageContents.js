@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 import { Model } from "./Scene";
+import { Typewriter, useTypewriter } from "react-simple-typewriter";
 
 const LandingPageContents = ({ imageUrl, title }) => {
   return (
@@ -28,7 +29,19 @@ const LandingPageContents = ({ imageUrl, title }) => {
         <div className="md:w-1/2 mt-4 md:mt-0 flex flex-col justify-center">
           {/* Right Column (Title) */}
           <h1 className="text-4xl font-bold">
-            Welcome to <span className="text-gradient">CHARIFY</span>
+            Welcome to
+            <span className="text-gradient">
+              <Typewriter
+                words={[" CHARIFY", " Donation Transparency"]}
+                loop={false}
+                cursor
+                cursorStyle="|"
+                cursorColor="white"
+                typeSpeed={60}
+                deleteSpeed={90}
+                delaySpeed={1250}
+              />
+            </span>
           </h1>
           <p className="text-xl mt-8">
             Charify: Burning NFTs for a Purpose, Fueling Charitable Acts
