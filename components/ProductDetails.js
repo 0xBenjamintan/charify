@@ -8,7 +8,7 @@ const ProductDetails = ({ imageUrl, title }) => {
         <div className="mt-4 md:mt-0 flex flex-col justify-center">
           {/* Right Column (Title) */}
           <h1 className="text-4xl font-bold">
-            Welcome to <span className="text-gradient">CHARIFY</span>
+            <span className="text-gradient">Problem Statement</span>
           </h1>
           <p className="text-xl mt-8">
             Charify: Burning NFTs for a Purpose, Fueling Charitable Acts
