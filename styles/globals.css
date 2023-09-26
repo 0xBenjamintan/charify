@@ -31,8 +31,15 @@ body {
 :root {
   --secondary-glow: conic-gradient(
     from 70deg at 50% 50%,
-    #30cfd0 0deg,
+    #14f195 0deg,
+    #9945ff 160deg,
     /* Change color here */ transparent 360deg
+  );
+  --third-glow: conic-gradient(
+    from 90deg at 50% 50%,
+    #9945ff 90deg,
+    #14f195 120deg,
+    transparent 250deg
   );
 }
 
