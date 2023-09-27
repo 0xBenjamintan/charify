@@ -5,7 +5,7 @@ const RootLayout = ({ children }) => {
   return (
     <div className="min-h-screen mx-auto">
       <Header />
-      <div className="min-h-screen mx-auto px-4">
+      <div className="min-h-screen mx-auto">
         <main className="my-0">{children}</main>
       </div>
     </div>

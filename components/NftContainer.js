@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import axios from "axios";
-import { Connection, clusterApiUrl, LAMPORTS_PER_SOL } from "@solana/web3.js"; import { getParsedNftAccountsByOwner, isValidSolanaAddress, createConnectionConfig, } from "@nfteyez/sol-rayz";
+import { clusterApiUrl } from "@solana/web3.js"; import { getParsedNftAccountsByOwner, isValidSolanaAddress, createConnectionConfig, } from "@nfteyez/sol-rayz";
+import Head from 'next/head'
+import Modal from "@/components/Modal";
 
 //check solana on window. This is useful to fetch address of your wallet.
 const getProvider = () => {
@@ -48,9 +50,13 @@ const getNftTokenData = async () => {
 const NftContainer = (props) => {
   const [nftData, setNftData] = useState([]);
   const [loading, setLoading] = useState(false);
-  //Define createConnection function here
-  //Define getProvider function here
-  //Define getAllNftData function here
+  const [isModalOpen, setModalOpen] = useState(false);
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   useEffect(() => {
     async function data() {
       let res = await getNftTokenData();
@@ -61,12 +67,15 @@ const NftContainer = (props) => {
   }, []);
   return (
     <>
+      <Head>
+        <title>Main Page</title>
+      </Head>
       <section className="nft">
         <div className="">
           <div className="text-center">
             <div className="">
-              <h4 className="">Welcome to Charify,"Username"</h4>
-              <h4 className="">Please Select the NFT that Wished to Burn!</h4>
+              <h1 className="text-xl mb-4 font-bold">Welcome to Charify</h1>
+              <h4 className="mb-6">Please Select the NFT that Wished to Burn</h4>
             </div>
           </div>
           <div className="nftContainer">
@@ -76,12 +85,16 @@ const NftContainer = (props) => {
                   nftData.length > 0 &&
                   nftData.map((val, ind) => {
                     return (
-                      <div className="nftCard" key={ind}>
+                      <div className="nftCard" onClick={openModal} key={ind}>
+                        <Modal isOpen={isModalOpen} onClose={closeModal}>
+                          <h2>Modal Content</h2>
+                          <p>Testing</p>
+                        </Modal>
                         <div className="cart text-left">
                           <div className="">
                             <img className="nftImg" src={val.data.image} alt="loading..." />
                             <div className="p-4">
-                              <p className=" font-bold">{val.data.name}</p>
+                              <p className=" font-bold text-gradient">{val.data.name}</p>
                               <h6 className=" text-left">{val.data.description}</h6>
                             </div>
                           </div>
