@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@lndgalante/solutils": "^0.6.0",
+    "@nfteyez/sol-rayz": "^0.10.2",
     "@react-three/drei": "^9.84.3",
     "@react-three/fiber": "^8.14.3",
     "@solana/spl-token": "^0.3.8",
@@ -19,6 +20,7 @@
     "@solana/wallet-adapter-wallets": "^0.19.20",
     "@solana/web3.js": "^1.78.4",
     "autoprefixer": "10.4.15",
+    "axios": "^1.5.0",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",

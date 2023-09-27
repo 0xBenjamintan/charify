@@ -127,3 +127,13 @@ body::after {
 .nav-text:hover {
   opacity: 1; /* Change opacity to 1 on hover */
 }
+
+.nftCard{
+  text-align: center;
+}
+
+.nftContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minimum width and column count as needed */
+  grid-gap: 20px; /* Add spacing between NFTs */
+}
