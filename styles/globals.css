@@ -11,7 +11,10 @@ body {
   padding: 0;
   background-color: #0c0c0c;
   color: white;
-  /* overflow: hidden; */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* Custom Text Gradient, dont remove this is for the text */
@@ -191,4 +194,9 @@ body::after {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.scrolled-header {
+  background-color: rgba(0, 0, 0, 0.05); /* Semi-transparent white background */
+  backdrop-filter: blur(25px); /* Apply a blur effect */
 }
