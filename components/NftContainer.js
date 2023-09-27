@@ -96,9 +96,18 @@ const NftContainer = (props) => {
                   nftData.map((val, ind) => {
                     return (
                       <div className="nftCard" onClick={openModal} key={ind}>
-                        <Modal isOpen={isModalOpen} onClose={closeModal}>
-                          <h6 className="text-black font-bold">Are you sure you wanted to burnt the NFT?</h6>
-                          <h6 className="text-black">Testing</h6>
+                        <Modal
+                          isOpen={isModalOpen}
+                          onClose={closeModal}
+                          className="modal"
+                        >
+                          <h6 className="text-black font-bold message">
+                            Are you sure you wanted to burnt the NFT?
+                          </h6>
+                          <div class="options text-black">
+                            <button class="btn text-black">Yes</button>
+                            <button class="btn text-black nobtn">No</button>
+                          </div>
                         </Modal>
                         <div className="cart text-left">
                           <div className="">
