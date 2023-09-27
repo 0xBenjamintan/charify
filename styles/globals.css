@@ -128,34 +128,37 @@ body::after {
   opacity: 1; /* Change opacity to 1 on hover */
 }
 
-.nftCard{
-  z-index: 40; /*make it infront and not blend to the background*/
+.nftCard {
+  z-index: 30; /*make it infront and not blend to the background*/
   background-color: #1b1622;
   border-radius: 15px;
   text-align: center;
   overflow: hidden;
 }
 
-.nftImg{
+.nftImg {
   width: 100%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   transition: 0.1s all ease-in-out;
 }
 
-.nftImg:hover{
+.nftImg:hover {
   transform: scale(1.05);
   overflow-clip-margin: content-box;
   overflow: clip;
 }
 
-.nftContainer{
+.nftContainer {
   padding-left: 3rem;
   padding-right: 3rem;
   padding-bottom: 3rem;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); /* Adjust the minimum width and column count as needed */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(270px, 1fr)
+  ); /* Adjust the minimum width and column count as needed */
   grid-gap: 15px; /* Add spacing between NFTs */
 }
 
@@ -171,6 +174,7 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 50;
 }
 
 .modal {
