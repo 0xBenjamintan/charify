@@ -97,8 +97,8 @@ const NftContainer = (props) => {
                     return (
                       <div className="nftCard" onClick={openModal} key={ind}>
                         <Modal isOpen={isModalOpen} onClose={closeModal}>
-                          <h2>Modal Content</h2>
-                          <p>Testing</p>
+                          <h6 className="text-black font-bold">Are you sure you wanted to burnt the NFT?</h6>
+                          <h6 className="text-black">Testing</h6>
                         </Modal>
                         <div className="cart text-left">
                           <div className="">
