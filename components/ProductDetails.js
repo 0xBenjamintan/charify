@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 
 const ProductDetails = ({ imageUrl, title }) => {
   return (
-    <div className="flex flex-col min-h-screen mx-auto max-w-6xl">
+    <div className="flex flex-col min-h-screen mx-auto max-w-6xl place-content-center">
       <div className="flex flex-col md:flex-row">
         <div className="mt-4 md:mt-0 flex flex-col justify-center">
           {/* Right Column (Title) */}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ap.cx/react-fullpage": "^0.3.0",
     "@lndgalante/solutils": "^0.6.0",
     "@nfteyez/sol-rayz": "^0.10.2",
     "@react-three/drei": "^9.84.3",

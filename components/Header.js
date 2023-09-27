@@ -8,7 +8,7 @@ const Header = () => {
   const { publicKey } = useWallet();
 
   return (
-    <header className="sticky top-0 z-40 scrolled-header">
+    <header className="sticky top-0 z-40 scrolled-header py-2">
       <div className="py-4 flex items-center justify-between mx-12">
         <Link href="/">
           <div className="flex items-center">

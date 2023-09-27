@@ -6,6 +6,11 @@ import LandingPageContents from "@/components/LandingPageContents";
 import ProductDetails from "@/components/ProductDetails";
 import Head from "next/head";
 import { Inter } from "next/font/google";
+import Fullpage, {
+  FullPageSections,
+  FullpageNavigation,
+  FullpageSection,
+} from "@ap.cx/react-fullpage";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,18 +25,29 @@ function Home() {
     }
   }, [publicKey, router]);
 
+  const SectionStyle = {
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+  };
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between ${inter.className}`}
-    >
+    <>
       <Head>
         <title>Charify</title>
       </Head>
-      <div className="relative flex flex-col justify-between place-items-center mt-10">
-        <LandingPageContents />
-        <ProductDetails />
-      </div>
-    </main>
+      <Fullpage>
+        <FullpageNavigation />
+        <FullPageSections>
+          <FullpageSection style={SectionStyle}>
+            <LandingPageContents />
+          </FullpageSection>
+          <FullpageSection style={SectionStyle}>
+            <ProductDetails />
+          </FullpageSection>
+        </FullPageSections>
+      </Fullpage>
+    </>
   );
 }
 
