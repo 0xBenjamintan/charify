@@ -6,9 +6,9 @@ function mainPage() {
   return (
     <div>
       <main
-        className={`flex min-h-screen flex-col items-center justify-between`}
+        className={`min-h-screen items-center justify-between`}
       >
-        <div className="relative flex flex-col justify-between place-items-center mt-10">
+        <div className="relative justify-between place-items-center mt-10">
           <NftContainer />
         </div>
       </main>

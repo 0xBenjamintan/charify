@@ -32,7 +32,7 @@ const getAllNftData = async () => {
 const getNftTokenData = async () => {
   try {
     let nftData = await getAllNftData();
-    var data = Object.keys(nftData).map((key) => nftData[key]);                                                                    let arr = [];
+    var data = Object.keys(nftData).map((key) => nftData[key]); let arr = [];
     let n = data.length;
     for (let i = 0; i < n; i++) {
       console.log(data[i].data.uri);
@@ -62,10 +62,11 @@ const NftContainer = (props) => {
   return (
     <>
       <section className="nft">
-        <div className="container">
-          <div className="row text-center">
-            <div className="col-12">
-              <h4 className="title">Your NFT</h4>
+        <div className="">
+          <div className="text-center">
+            <div className="">
+              <h4 className="">Welcome to Charify,"Username"</h4>
+              <h4 className="">Please Select the NFT that Wished to Burn!</h4>
             </div>
           </div>
           <div className="nftContainer">
@@ -77,10 +78,12 @@ const NftContainer = (props) => {
                     return (
                       <div className="nftCard" key={ind}>
                         <div className="cart text-left">
-                          <div className="img">
-                            <img src={val.data.image} alt="loading..." />
-                            <p className=" font-bold">{val.data.name}</p>
-                            <h6 className=" text-left">{val.data.description}</h6>
+                          <div className="">
+                            <img className="nftImg" src={val.data.image} alt="loading..." />
+                            <div className="p-4">
+                              <p className=" font-bold">{val.data.name}</p>
+                              <h6 className=" text-left">{val.data.description}</h6>
+                            </div>
                           </div>
                         </div>
                       </div>

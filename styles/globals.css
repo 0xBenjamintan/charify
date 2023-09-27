@@ -129,11 +129,20 @@ body::after {
 }
 
 .nftCard{
+  z-index: 9999; /*make it infront and not blend to the background*/
+  background-color: #1b1622;
+  border-radius: 15px;
   text-align: center;
 }
 
+.nftImg{
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
 .nftContainer{
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minimum width and column count as needed */
-  grid-gap: 20px; /* Add spacing between NFTs */
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); /* Adjust the minimum width and column count as needed */
+  grid-gap: 15px; /* Add spacing between NFTs */
 }
