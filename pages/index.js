@@ -26,6 +26,8 @@ function Home() {
     // Check if publicKey is present and redirect accordingly
     if (publicKey) {
       router.push("/mainPage"); // Replace with the actual path to mainpage.js
+    } else {
+      router.push("/");
     }
   }, [publicKey, router]);
 
