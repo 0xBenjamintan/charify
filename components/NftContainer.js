@@ -9,6 +9,7 @@ import {
 } from "@nfteyez/sol-rayz";
 import Head from "next/head";
 import Modal from "@/components/Modal";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 //check solana on window. This is useful to fetch address of your wallet.
 const getProvider = () => {
@@ -74,6 +75,9 @@ const NftContainer = (props) => {
     }
     data();
   }, []);
+
+  const { publicKey } = useWallet();
+  const publicKeyString = publicKey?.toBase58() || "N/A"; // Convert publicKey to string or use "N/A" if it's not available
   return (
     <main>
       <Head>
@@ -86,6 +90,7 @@ const NftContainer = (props) => {
               <h1 className="text-4xl mb-4 mt-8 font-bold">
                 Here are all your <span className="text-gradient">NFTs</span>
               </h1>
+              <h4 className="mb-6">Wallet address: {publicKeyString}</h4>
               <h4 className="mb-6">
                 Please Select the NFT that Wished to Burn
               </h4>
