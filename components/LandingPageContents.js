@@ -8,7 +8,7 @@ const LandingPageContents = ({ imageUrl, title }) => {
   return (
     <div className="flex flex-col min-h-screen mx-auto max-w-6xl place-content-center">
       <div className="flex flex-col md:flex-row">
-        <div className="md:w-2/5 h-[500px] pr-4 z-30">
+        <div className="md:w-2/5 h-[500px] pr-4 solanaToken">
           {/* Left Column (Image) */}
           <Canvas>
             <PerspectiveCamera position={[0, 0, 5]} makeDefault={true} />
