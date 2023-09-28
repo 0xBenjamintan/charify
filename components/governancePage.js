@@ -45,7 +45,7 @@ const Governance = ({ cards }) => {
           </p>
           <p className="mb-6">Votes Counter: </p>
           <div className="flex justify-center">
-            <Button className="w-">Vote</Button>
+            <Button>Vote</Button>
           </div>
         </BlurCard>
         <BlurCard>
@@ -59,7 +59,7 @@ const Governance = ({ cards }) => {
           </p>
           <p className="mb-6">Votes Counter: </p>
           <div className="flex justify-center">
-            <Button className="w-">Vote</Button>
+            <Button>Vote</Button>
           </div>
         </BlurCard>
         <BlurCard>
@@ -73,7 +73,7 @@ const Governance = ({ cards }) => {
           </p>
           <p className="mb-6">Votes Counter: </p>
           <div className="flex justify-center">
-            <Button className="w-">Vote</Button>
+            <Button>Vote</Button>
           </div>
         </BlurCard>
       </div>
