@@ -190,13 +190,13 @@ body::after {
   align-items: center;
   padding: 1.6rem 3rem;
   border: 3px solid black;
-  border-radius: 5px;
+  border-radius: 15px;
   background: white;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .message {
   font-size:1.1rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.6rem;
   margin-top: 0;
 }
 .btn {
@@ -206,6 +206,7 @@ body::after {
   background: white;
   padding: 0.3rem 3.4rem;
   border: 3px solid black;
+  border-radius: 15px;
   margin-right: 2.6rem;
   box-shadow: 0 0 0 black;
   transition: all 0.2s;
@@ -238,4 +239,17 @@ body::after {
 
 .solanaToken{
   z-index: 9999;
+}
+
+/* Modal cart */
+.nftImgModal{
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  width: 300px;
+}
+
+.cart{
+  background-color: #1b1622;
+  border-radius: 15px;
+  margin-bottom: 1rem;
 }

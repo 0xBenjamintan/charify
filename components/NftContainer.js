@@ -87,12 +87,22 @@ const NftContainer = (props) => {
         <div className="">
           <div className="text-left">
             <div className="border-solid border-zinc-700 rounded-lg border-2 mb-6 ml-12 mr-12 px-3">
-              <h1 className="text-4xl mb-4 mt-8 font-bold">
-                Here are all your <span className="text-gradient">NFTs</span>
+              <h1 className="pt-5 font-bold text-3xl mb-3 flex tracking-wide">
+                Welcome,{" "}
+                <h4 className="text-gradient">
+                  {publicKeyString.slice(0, 4) +
+                    "..." +
+                    publicKeyString.slice(40)}
+                  !
+                </h4>
               </h1>
-              <h4 className="mb-6">Wallet address: {publicKeyString}</h4>
+              <h4 className="text-2xl mb-4">
+                Here are all your{" "}
+                <span className="text-gradient text-4xl">NFTs</span>
+              </h4>
               <h4 className="mb-6">
-                Please Select the NFT that Wished to Burn
+                Please Select the <span className="text-gradient">NFT</span>{" "}
+                that Wished to Burn
               </h4>
             </div>
           </div>
@@ -114,14 +124,25 @@ const NftContainer = (props) => {
                             onClose={closeModal}
                             className="modal"
                           >
-                            <h6 className="text-black font-bold message">
+                            <h4 className="text-black font-bold message">
                               Are you sure you wanted to burnt the NFT?
-                            </h6>
+                            </h4>
                             {/* Display selected NFT data in the modal */}
-                            <p className="text-black">
-                              {selectedNft.data.name}
-                            </p>
-                            <img src={selectedNft.data.image} alt="NFT" />
+                            <div className="cart text-left">
+                              <div className="">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                  className="nftImgModal w-80"
+                                  src={selectedNft.data.image}
+                                  alt="loading..."
+                                />
+                                <div className="p-4">
+                                  <p className=" font-bold text-gradient">
+                                    {selectedNft.data.name}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
                             <div class="options text-black">
                               <button class="btn text-black">Yes</button>
                               <button class="btn text-black nobtn">No</button>
