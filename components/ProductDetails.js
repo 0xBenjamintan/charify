@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { Typewriter, useTypewriter } from "react-simple-typewriter";
 
 const ProductDetails = ({ imageUrl, title }) => {
   return (
@@ -9,8 +10,20 @@ const ProductDetails = ({ imageUrl, title }) => {
         <div className="mt-4 md:mt-0 flex flex-col justify-center">
           {/* Right Column (Title) */}
           <h1 className="text-4xl font-bold">
-            <span className="text-gradient">
-              Championing Solana&rsquo;s Integrity and Generosity.
+            <span className="">
+              Championing Solana&rsquo;s{" "}
+              <span className="text-gradient">
+                <Typewriter
+                  words={[" Integrity & Generosity"]}
+                  loop={false}
+                  cursor
+                  cursorStyle="|"
+                  cursorColor="white"
+                  typeSpeed={60}
+                  deleteSpeed={90}
+                  delaySpeed={1250}
+                />
+              </span>
             </span>
           </h1>
           <p className="text-xl mt-8">
