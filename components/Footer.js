@@ -16,7 +16,9 @@ const Footer = ({ imageUrl, title }) => {
           <p className="text-xl mt-8 text-center">
             Start <span className="burnText">BURNING</span> your{" "}
             <span className="text-gradient">NFTs</span> and join{" "}
-            <span className="text-gradient">Charify's</span> mission today.
+            <span className="text-gradient">
+              Charify&rsquo;s mission today.
+            </span>
           </p>
           <p className="text-lg mt-8 text-gradient font-bold">
             <WalletMultiButton />

@@ -14,7 +14,7 @@ const Step34 = ({ imageUrl, title }) => {
           token address you burn. These tokens hold real value and can be used
           for governance, giving you a say in charitable donations. You also
           receive 0.002 <span className="text-gradient">$SOL</span> sent to{" "}
-          <span className="text-gradient">CharifyDAO's</span>
+          <span className="text-gradient">CharifyDAO&rsquo;s</span>
           wallet, supporting our mission.
         </p>
       </div>

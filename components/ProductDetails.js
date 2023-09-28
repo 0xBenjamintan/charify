@@ -10,7 +10,7 @@ const ProductDetails = ({ imageUrl, title }) => {
           {/* Right Column (Title) */}
           <h1 className="text-4xl font-bold">
             <span className="text-gradient">
-              Championing Solana's Integrity and Generosity.
+              Championing Solana&rsquo;s Integrity and Generosity.
             </span>
           </h1>
           <p className="text-xl mt-8">
