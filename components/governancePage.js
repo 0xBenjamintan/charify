@@ -2,8 +2,9 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import BlurCard from "./Card";
 
-const Governance = () => {
+const Governance = ({ cards }) => {
   const { publicKey } = useWallet();
   const publicKeyString = publicKey?.toBase58() || "N/A"; // Convert publicKey to string or use "N/A" if it's not available
 
@@ -32,7 +33,7 @@ const Governance = () => {
         </div>
       </div>
       <div className="flex flex-col min-h-screen mx-auto max-w-6xl border-solid border-2">
-        test
+        <BlurCard>test</BlurCard>
       </div>
     </main>
   );
