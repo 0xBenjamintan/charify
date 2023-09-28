@@ -195,13 +195,13 @@ body::after {
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .message {
-  font-size:1.1rem;
+  font-size: 1.1rem;
   margin-bottom: 0.6rem;
   margin-top: 0;
 }
 .btn {
-  color:inherit;
-    font-family:inherit;
+  color: inherit;
+  font-family: inherit;
   font-size: inherit;
   background: white;
   padding: 0.3rem 3.4rem;
@@ -237,18 +237,18 @@ body::after {
   backdrop-filter: blur(25px); /* Apply a blur effect */
 }
 
-.solanaToken{
+.solanaToken {
   z-index: 9999;
 }
 
 /* Modal cart */
-.nftImgModal{
+.nftImgModal {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   width: 300px;
 }
 
-.cart{
+.cart {
   background-color: #1b1622;
   border-radius: 15px;
   margin-bottom: 1rem;

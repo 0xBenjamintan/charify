@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import BlurCard from "./Card";
+import Button from "./Button";
 
 const Governance = ({ cards }) => {
   const { publicKey } = useWallet();
@@ -32,8 +33,49 @@ const Governance = ({ cards }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col min-h-screen mx-auto max-w-6xl border-solid border-2">
-        <BlurCard>test</BlurCard>
+      <div className="grid grid-cols-3 justify-between min-h-fit mx-auto max-w-7xl pt-32">
+        <BlurCard>
+          <h1 className="font-bold text-3xl text-gradient mb-6">
+            Charity Name
+          </h1>
+          <p className="font-bold text-xl mb-4">Charity Description:</p>
+          <p className="mb-4">
+            This is the sample text to write in here regarding what the charity
+            is doing
+          </p>
+          <p className="mb-6">Votes Counter: </p>
+          <div className="flex justify-center">
+            <Button className="w-">Vote</Button>
+          </div>
+        </BlurCard>
+        <BlurCard>
+          <h1 className="font-bold text-3xl text-gradient mb-6">
+            Charity Name
+          </h1>
+          <p className="font-bold text-xl mb-4">Charity Description:</p>
+          <p className="mb-4">
+            This is the sample text to write in here regarding what the charity
+            is doing
+          </p>
+          <p className="mb-6">Votes Counter: </p>
+          <div className="flex justify-center">
+            <Button className="w-">Vote</Button>
+          </div>
+        </BlurCard>
+        <BlurCard>
+          <h1 className="font-bold text-3xl text-gradient mb-6">
+            Charity Name
+          </h1>
+          <p className="font-bold text-xl mb-4">Charity Description:</p>
+          <p className="mb-4">
+            This is the sample text to write in here regarding what the charity
+            is doing
+          </p>
+          <p className="mb-6">Votes Counter: </p>
+          <div className="flex justify-center">
+            <Button className="w-">Vote</Button>
+          </div>
+        </BlurCard>
       </div>
     </main>
   );
