@@ -88,13 +88,13 @@ const NftContainer = (props) => {
           <div className="text-left">
             <div className="border-solid border-zinc-700 rounded-lg border-2 mb-6 ml-12 mr-12 px-3">
               <h1 className="pt-5 font-bold text-3xl mb-3 flex tracking-wide">
-                Welcome,{" "}
-                <h4 className="text-gradient">
+                Welcome,&nbsp;{" "}
+                <span className="text-gradient">
                   {publicKeyString.slice(0, 4) +
                     "..." +
                     publicKeyString.slice(40)}
                   !
-                </h4>
+                </span>
               </h1>
               <h4 className="text-2xl mb-4">
                 Here are all your{" "}
