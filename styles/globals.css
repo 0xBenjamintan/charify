@@ -271,3 +271,10 @@ body::after {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+
+.governanceCard{
+  z-index: 30; /*make it infront and not blend to the background*/
+  border-radius: 15px;
+  text-align: center;
+  overflow: hidden;
+}
