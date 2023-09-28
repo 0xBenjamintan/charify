@@ -10,9 +10,11 @@ const Step34 = ({ imageUrl, title }) => {
           <span className="text-gradient">Step 3</span>
         </h1>
         <p className="text-xl text-justify w-2/3">
-          You earn 1 $CRY token for each token address you burn. These tokens
-          hold real value and can be used for governance, giving you a say in
-          charitable donations. You also receive 0.002 $SOL sent to CharifyDAO's
+          You earn 1 <span className="text-gradient">$CRY</span> token for each
+          token address you burn. These tokens hold real value and can be used
+          for governance, giving you a say in charitable donations. You also
+          receive 0.002 <span className="text-gradient">$SOL</span> sent to{" "}
+          <span className="text-gradient">CharifyDAO's</span>
           wallet, supporting our mission.
         </p>
       </div>
@@ -22,9 +24,11 @@ const Step34 = ({ imageUrl, title }) => {
       <div className="flex justify-center items-center">
         {/* Right Column (Title) */}
         <p className="text-xl text-justify w-2/3">
-          As a $CRY token holder, you can participate in our governance system.
-          Vote for your preferred charity to ensure deserving causes receive
-          donations. Your voice matters, and together, we can make a big impact.
+          As a <span className="text-gradient">$CRY</span> token holder, you can
+          participate in our governance system.
+          <span className="text-gradient">Vote</span> for your preferred charity
+          to ensure deserving causes receive donations. Your voice matters, and
+          together, we can make a big impact.
         </p>
         <h1 className="text-4xl font-bold w-1/3 text-center">
           <span className="text-gradient">Step 4</span>
