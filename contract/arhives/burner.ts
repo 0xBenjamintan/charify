@@ -1,7 +1,7 @@
 import * as sweb3 from '@solana/web3.js';
 import * as splToken from '@solana/spl-token';
 import { TokenMetas, TOKEN_METADATA_PROGRAM_ID } from '@utils';
-import { createBurnNftInstruction } from './mplBurnNft';
+import { createBurnNftInstruction } from '../src/mplBurnNft';
 
 export const MAX_TOKEN_BURNS_PER_TRANSACTION = 5;
 

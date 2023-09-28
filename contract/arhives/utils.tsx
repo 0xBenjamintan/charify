@@ -3,7 +3,7 @@ import * as sweb3 from '@solana/web3.js';
 import * as anchor from "@project-serum/anchor";
 import { GridSelectionModel } from '@mui/x-data-grid';
 import * as splToken from '@solana/spl-token';
-import { getRedeemableLamports } from './burner';
+import { getRedeemableLamports } from '../arhives/burner';
 
 
 
