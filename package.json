@@ -11,6 +11,8 @@
   "dependencies": {
     "@lndgalante/solutils": "^0.6.0",
     "@metaplex-foundation/js": "^0.19.5",
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/defender-sdk": "^1.2.0",
     "@solana/spl-token": "^0.3.8",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.34",
