@@ -18,12 +18,11 @@
 }
 
 .wallet-adapter-button-trigger {
-  background-image: linear-gradient(to right, #9945ff, #14f195);
+  background-color: transparent;
+  border: 2px solid;
+  border-color: #9945ff;
   border-radius: 0.75rem;
   border-width: 2px;
-  color: white; /* Add text color */
-  cursor: pointer; /* Add pointer cursor for interactivity */
-  /* Add any other styles you need */
 }
 
 .wallet-adapter-button:not([disabled]):focus-visible {
