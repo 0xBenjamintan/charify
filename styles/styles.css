@@ -20,10 +20,12 @@
 .wallet-adapter-button-trigger {
   background-color: transparent;
   border: 2px solid;
-  border-radius: 20%;
+  border-image: linear-gradient(to right, #9945ff, #14f195);
   border-image-slice: 1;
+  border-radius: 0.75rem;
   border-width: 2px;
-  border-image-source: linear-gradient(to left, #9945ff, #14f195);
+  color: white;
+  cursor: pointer;
 }
 
 .wallet-adapter-button:not([disabled]):focus-visible {
