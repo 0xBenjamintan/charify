@@ -51,7 +51,6 @@ body::before,
 body::after {
   content: "";
   position: absolute;
-  z-index: 1;
   opacity: 0.8;
 }
 
@@ -238,7 +237,7 @@ body::after {
 }
 
 .solanaToken{
-  z-index: 9999;
+  z-index: 1;
 }
 
 /* Modal cart */
@@ -252,4 +251,16 @@ body::after {
   background-color: #1b1622;
   border-radius: 15px;
   margin-bottom: 1rem;
+}
+
+.arrow {
+  border: solid #14f195;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }

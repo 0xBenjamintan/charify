@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
 import { Model } from "./Scene";
 import { Typewriter, useTypewriter } from "react-simple-typewriter";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const LandingPageContents = ({ imageUrl, title }) => {
   return (
@@ -51,7 +52,7 @@ const LandingPageContents = ({ imageUrl, title }) => {
             effortlessly support public goods using their untapped resources.
           </p>
           <p className="text-xl mt-8 text-gradient font-bold">
-            Connect your wallet and try it out!
+            <WalletMultiButton />
           </p>
         </div>
       </div>
