@@ -57,10 +57,13 @@ const NftContainer = (props) => {
   const [nftData, setNftData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
-  const openModal = () => {
+  const [selectedNft, setSelectedNft] = useState(null); // Store selected NFT data
+  const openModal = (nft) => {
+    setSelectedNft(nft); // Set the selected NFT data
     setModalOpen(true);
   };
   const closeModal = () => {
+    setSelectedNft(null); // Clear selected NFT data when closing modal
     setModalOpen(false);
   };
   useEffect(() => {
@@ -95,20 +98,31 @@ const NftContainer = (props) => {
                   nftData.length > 0 &&
                   nftData.map((val, ind) => {
                     return (
-                      <div className="nftCard" onClick={openModal} key={ind}>
-                        <Modal
-                          isOpen={isModalOpen}
-                          onClose={closeModal}
-                          className="modal"
-                        >
-                          <h6 className="text-black font-bold message">
-                            Are you sure you wanted to burnt the NFT?
-                          </h6>
-                          <div class="options text-black">
-                            <button class="btn text-black">Yes</button>
-                            <button class="btn text-black nobtn">No</button>
-                          </div>
-                        </Modal>
+                      <div
+                        className="nftCard"
+                        onClick={() => openModal(val)}
+                        key={ind}
+                      >
+                        {selectedNft && ( // Render modal only if a NFT is selected
+                          <Modal
+                            isOpen={isModalOpen}
+                            onClose={closeModal}
+                            className="modal"
+                          >
+                            <h6 className="text-black font-bold message">
+                              Are you sure you wanted to burnt the NFT?
+                            </h6>
+                            {/* Display selected NFT data in the modal */}
+                            <p className="text-black">
+                              {selectedNft.data.name}
+                            </p>
+                            <img src={selectedNft.data.image} alt="NFT" />
+                            <div class="options text-black">
+                              <button class="btn text-black">Yes</button>
+                              <button class="btn text-black nobtn">No</button>
+                            </div>
+                          </Modal>
+                        )}
                         <div className="cart text-left">
                           <div className="">
                             {/* eslint-disable-next-line @next/next/no-img-element */}

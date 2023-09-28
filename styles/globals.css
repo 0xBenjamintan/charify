@@ -235,3 +235,7 @@ body::after {
   background-color: rgba(0, 0, 0, 0.05); /* Semi-transparent white background */
   backdrop-filter: blur(25px); /* Apply a blur effect */
 }
+
+.solanaToken{
+  z-index: 9999;
+}
