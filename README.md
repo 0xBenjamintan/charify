@@ -1,5 +1,7 @@
 # Charify - Empowering Charitable Donations with Voting Power and Circulating Funds
 
+![](public/landingpage.png)
+
 ## Introduction to Charify $$
 
 Welcome to Charify, an innovative Solana-based protocol that aims to reshape the space of charitable donations and empower voting power through funds from NFT burnings. In this comprehensive README, we'll dive deep into the core concept of Charify, its mission, problem statement, innovative solutions, value propositions, roadmap, and how it intends to revolutionize the crypto space.
