@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
@@ -8,6 +8,27 @@ import Button from "./Button";
 const Governance = ({ cards }) => {
   const { publicKey } = useWallet();
   const publicKeyString = publicKey?.toBase58() || "N/A"; // Convert publicKey to string or use "N/A" if it's not available
+  const [counter, setCounter] = useState(0);
+  const [counter1, setCounter1] = useState(0);
+  const [counter2, setCounter2] = useState(0);
+
+  const incrementCounter = () => {
+    const newCounter = counter + 1;
+    setCounter(newCounter);
+    alert(`Votes: ${newCounter}`);
+  };
+
+  const incrementCounter1 = () => {
+    const newCounter1 = counter1 + 1;
+    setCounter1(newCounter1);
+    alert(`Votes: ${newCounter1}`);
+  };
+
+  const incrementCounter2 = () => {
+    const newCounter2 = counter2 + 1;
+    setCounter2(newCounter2);
+    alert(`Votes: ${newCounter2}`);
+  };
 
   return (
     <main>
@@ -43,9 +64,9 @@ const Governance = ({ cards }) => {
             This is the sample text to write in here regarding what the charity
             is doing
           </p>
-          <p className="mb-6">Votes Counter: </p>
+          <p className="mb-6">Votes Counter: {counter}</p>
           <div className="flex justify-center">
-            <Button>Vote</Button>
+            <Button onClick={incrementCounter}>Vote</Button>
           </div>
         </BlurCard>
         <BlurCard>
@@ -57,9 +78,9 @@ const Governance = ({ cards }) => {
             This is the sample text to write in here regarding what the charity
             is doing
           </p>
-          <p className="mb-6">Votes Counter: </p>
+          <p className="mb-6">Votes Counter: {counter1}</p>
           <div className="flex justify-center">
-            <Button>Vote</Button>
+            <Button onClick={incrementCounter1}>Vote</Button>
           </div>
         </BlurCard>
         <BlurCard>
@@ -71,9 +92,9 @@ const Governance = ({ cards }) => {
             This is the sample text to write in here regarding what the charity
             is doing
           </p>
-          <p className="mb-6">Votes Counter: </p>
+          <p className="mb-6">Votes Counter: {counter2}</p>
           <div className="flex justify-center">
-            <Button>Vote</Button>
+            <Button onClick={incrementCounter2}>Vote</Button>
           </div>
         </BlurCard>
       </div>
