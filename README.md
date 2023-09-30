@@ -112,4 +112,4 @@ Charify is actively participating in the DeFi Bounty Track, with a mission to de
 
 ## Conclusion
 
-Charify is more than just a protocol; it's a movement that aims to make charitable donations an integral part of the crypto community.
+Charify is more than just a protocol; it's a movement that aims to make charitable donations an integral part of the crypto community. By providing users with the tools they need to dispose of unwanted assets securely and vote on charitable causes, Charify is paving the way for a more compassionate and transparent crypto space. Join us in our mission to make the world a better place—one $CRY token at a time.
