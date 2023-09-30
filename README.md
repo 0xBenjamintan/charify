@@ -1,4 +1,4 @@
-# Charify - Empowering Charitable Donations with Voting Power and Circulating Funds
+# Charify - Empowering Charitable Donations with Voting Power and Circulating Funds - [Try Me Out](https://charify.vercel.app/)
 
 ![](public/landingpage.png)
 
