@@ -68,12 +68,10 @@ const NftContainer = (props) => {
   const handleBurnNFT = () => {
     // Close the modal
     setModalOpen(false);
-
     // Show alert
     alert("NFT successfully burnt!");
-
     // Refresh the page
-    router.reload;
+    router.reload();
   };
   const closeModal = () => {
     setSelectedNft(null); // Clear selected NFT data when closing modal
