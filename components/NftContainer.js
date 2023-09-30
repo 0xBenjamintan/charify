@@ -10,6 +10,7 @@ import {
 import Head from "next/head";
 import Modal from "@/components/Modal";
 import { useWallet } from "@solana/wallet-adapter-react";
+import { useRouter } from "next/router"; // Import useRouter
 
 //check solana on window. This is useful to fetch address of your wallet.
 const getProvider = () => {
@@ -59,9 +60,20 @@ const NftContainer = (props) => {
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedNft, setSelectedNft] = useState(null); // Store selected NFT data
+  const router = useRouter(); // Initialize useRouter
   const openModal = (nft) => {
     setSelectedNft(nft); // Set the selected NFT data
     setModalOpen(true);
+  };
+  const handleBurnNFT = () => {
+    // Close the modal
+    setModalOpen(false);
+
+    // Show alert
+    alert("NFT successfully burnt!");
+
+    // Refresh the page
+    router.reload;
   };
   const closeModal = () => {
     setSelectedNft(null); // Clear selected NFT data when closing modal
@@ -143,8 +155,13 @@ const NftContainer = (props) => {
                                 </div>
                               </div>
                             </div>
-                            <div class="options text-black">
-                              <button class="btn text-black">Yes</button>
+                            <div class="options text-black nobtn">
+                              <button
+                                class="btn text-black"
+                                onClick={handleBurnNFT}
+                              >
+                                Yes
+                              </button>
                               <button class="btn text-black nobtn">No</button>
                             </div>
                           </Modal>
