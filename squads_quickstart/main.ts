@@ -48,4 +48,49 @@ describe("Interacting with the Squads V4 SDK", () => {
         });
         console.log("Multisig created: ", signature);
     });
+
+    it("Create a transaction proposal", async () => {
+        const [vaultPda, vaultBump] = multisig.getVaultPda({
+            multisigPda,
+            index: 0,
+        });
+        const instruction = SystemProgram.transfer(
+        // The transfer is being signed from the Squads Vault, that is why we use the VaultPda
+            vaultPda,
+            creator.publicKey,
+            1 * LAMPORTS_PER_SOL
+        );
+        // This message contains the instructions that the transaction is going to execute
+        const transferMessage = new TransactionMessage({
+            payerKey: vaultPda,
+            recentBlockhash: (await connection.getLatestBlockhash()).blockhash,
+            instructions: [instruction],
+        });
+        // This is the first transaction in the multisig
+        const transactionIndex = BigInt(1);
+        const signature1 = await multisig.rpc.vaultTransactionCreate({
+            connection,
+            feePayer: creator,
+            multisigPda,
+            transactionIndex,
+            creator: creator.publicKey,
+            vaultIndex: 1,
+            ephemeralSigners: 0,
+            transactionMessage: transferMessage,
+            memo: "Transfer 0.1 SOL to creator",
+        });
+    
+        console.log("Transaction created: ", signature1);
+        
+        const signature2 = await multisig.rpc.proposalCreate({
+            connection,
+            feePayer: members.voter,
+            multisigPda,
+            transactionIndex,
+            creator: feePayer,
+        });
+        
+        console.log("Transaction proposal created: ", signature2);
+        
+    });
 });
