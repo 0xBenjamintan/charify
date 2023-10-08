@@ -121,7 +121,7 @@
     rpc-websockets "^7.5.1"
     superstruct "^0.14.2"
 
-"@sqds/multisig@^1.9.0":
+"@sqds/multisig@^1.10.0":
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/@sqds/multisig/-/multisig-1.10.0.tgz#c676ec3268cc27413fc36b207c9e131c9d104588"
   integrity sha512-MW2C70QqSOsaeTto93bvJxxWfSITxoyNuQ2z23hDtYH+pImXjH+0B4BJghnPgY1fYxu+QNNbez7GHuWHepRgxA==

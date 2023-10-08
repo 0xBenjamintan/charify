@@ -4,7 +4,7 @@
   },
   "dependencies": {
     "@solana/web3.js": "^1.87.0",
-    "@sqds/multisig": "^1.9.0",
+    "@sqds/multisig": "^1.10.0",
     "@sqds/sdk": "^2.0.4"
   },
   "devDependencies": {
