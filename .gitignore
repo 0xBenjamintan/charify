@@ -33,3 +33,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+*.sst
+squads_quickstart/test-ledger/rocksdb/CURRENT
+*.log
+squads_quickstart/test-ledger/rocksdb/IDENTITY
+squads_quickstart/test-ledger/rocksdb/LOCK
+squads_quickstart/test-ledger/rocksdb/LOG
+*.1696849754431658
+squads_quickstart/test-ledger/rocksdb/MANIFEST-000060
+squads_quickstart/test-ledger/rocksdb/OPTIONS-000064
+squads_quickstart/test-ledger/rocksdb/OPTIONS-000066
+*.bin
+*.json
