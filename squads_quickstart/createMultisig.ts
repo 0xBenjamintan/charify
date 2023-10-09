@@ -1,5 +1,6 @@
 import * as multisig from "@sqds/multisig";
-import { Connection, Keypair, SystemProgram } from "@solana/web3.js";
+import { Connection } from "@solana/web3.js";
+import { Permissions } from "@sqds/multisig/lib/types";
 
 // Cluster Connection
 const connection = new Connection("https://api.devnet.solana.com"); // Solana Devnet RPC URL
