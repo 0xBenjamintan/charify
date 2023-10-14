@@ -57,12 +57,12 @@ const Governance = ({ cards }) => {
       <div className="grid grid-cols-3 justify-between min-h-fit mx-auto max-w-7xl pt-32">
         <BlurCard>
           <h1 className="font-bold text-3xl text-gradient mb-6">
-            Charity Name
+            Mercy Malaysia
           </h1>
           <p className="font-bold text-xl mb-4">Charity Description:</p>
           <p className="mb-4">
-            This is the sample text to write in here regarding what the charity
-            is doing
+            A non profit organization that aims to become exceptional in the
+            provisionof medical and humanitarian relief to all.
           </p>
           <p className="mb-6">Votes Counter: {counter}</p>
           <div className="flex justify-center">
@@ -71,12 +71,12 @@ const Governance = ({ cards }) => {
         </BlurCard>
         <BlurCard>
           <h1 className="font-bold text-3xl text-gradient mb-6">
-            Charity Name
+            Yellow House
           </h1>
           <p className="font-bold text-xl mb-4">Charity Description:</p>
           <p className="mb-4">
-            This is the sample text to write in here regarding what the charity
-            is doing
+            A local nonprofit organization that is committed to helping the
+            homeless live better, more sustainable lives.
           </p>
           <p className="mb-6">Votes Counter: {counter1}</p>
           <div className="flex justify-center">
@@ -85,12 +85,13 @@ const Governance = ({ cards }) => {
         </BlurCard>
         <BlurCard>
           <h1 className="font-bold text-3xl text-gradient mb-6">
-            Charity Name
+            Fugee School
           </h1>
           <p className="font-bold text-xl mb-4">Charity Description:</p>
           <p className="mb-4">
-            This is the sample text to write in here regarding what the charity
-            is doing
+            Children of refugees and asylum seekers have access to primary,
+            secondary, and high school education, aiming to to give every child
+            a learning opportunity.
           </p>
           <p className="mb-6">Votes Counter: {counter2}</p>
           <div className="flex justify-center">
