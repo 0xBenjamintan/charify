@@ -8,7 +8,7 @@ const HowItWork = ({ imageUrl, title }) => {
         <div className="mt-4 md:mt-0 flex flex-col justify-center">
           {/* Right Column (Title) */}
           <h1 className="text-4xl font-bold">
-            <span className="text-gradient">How It Work?</span>
+            <span className="text-gradient">How It Works?</span>
           </h1>
           <p className="text-xl mt-8 text-justify">
             At <spam className="text-gradient">Charify</spam>, we&rsquo;ve made
